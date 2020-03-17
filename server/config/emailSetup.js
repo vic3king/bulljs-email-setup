@@ -23,7 +23,7 @@ const mailSender = async mailData => {
       });
 
       const data = {
-        from: 'no-reply@karneek.com',
+        from: 'no-reply@bull.com',
         to: mailData.emailTo,
         subject: mailData.subject,
         html: mailData.message,
@@ -36,7 +36,7 @@ const mailSender = async mailData => {
     } else {
       const msg = {
         to: mailData.emailTo,
-        from: 'no-reply@karneek.com',
+        from: 'no-reply@bull.com',
         subject: mailData.subject,
         html: mailData.message,
       };

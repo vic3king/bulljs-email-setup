@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import { authService } from '../services/authService';
 import authHelper from '../helpers/auth';
+import notifications from '../helpers/notifications';
 
 dotenv.config();
 /**
@@ -27,6 +28,10 @@ export default class AuthController {
         username,
         isVerified,
       });
+
+      const { REGISTRATION_URL } = process.env;
+      const verificationLink = `${REGISTRATION_URL}?token=${verificationToken}`;
+      await notifications.registrationEmail(email, verificationLink, username);
 
       return res.status(200).send({
         status: true,

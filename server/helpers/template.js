@@ -49,7 +49,7 @@ const template = (title, body, email) => `
             <tr align="center">
               <td style="width: 100%; ">
                 <div style="background: #EFEEEE; padding: 20px 0px">
-                  <p style="line-height: 20px; font-size: 0.75rem; color: black;">You’re getting this message because your Karneek account is connected to <a href="#">${email}</a><br />
+                  <p style="line-height: 20px; font-size: 0.75rem; color: black;">You’re getting this message because your Bull account is connected to <a href="#">${email}</a><br />
                       <a href="#">unsubscribe</a> from similar emails
                   </p>
                 </div>
